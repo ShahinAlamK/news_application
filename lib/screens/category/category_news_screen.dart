@@ -17,13 +17,13 @@ class _CategoryNewsScreenState extends State<CategoryNewsScreen> {
 
   @override
   void initState() {
-    Provider.of<NewsController>(context,listen: false).fetchCategoryController(widget.categories.toLowerCase());
+    Provider.of<NewsController>(context,listen: false)
+        .fetchCategoryController(widget.categories.toLowerCase());
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    final provider=Provider.of<NewsController>(context);
     return Scaffold(
       appBar:AppBar(
         elevation: 0,

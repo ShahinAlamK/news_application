@@ -53,7 +53,15 @@ class NewsCard extends StatelessWidget {
                     topLeft: Radius.circular(10),
                     topRight: Radius.circular(10),
                   ),
-                  child:thumbnailUrl==null?Image.asset("assets/img/placeholder.jpg"):cachedNetImage(image: thumbnailUrl))),
+                  child:Image.network(thumbnailUrl,
+                    errorBuilder:(context,error,child){
+                    return  Image.asset("assets/img/placeholder.jpg");
+                    },
+                    loadingBuilder:(BuildContext context, Widget child, ImageChunkEvent? load){
+                    if(load==null)return child;
+                    return Image.asset("assets/img/placeholder.jpg");
+                    },
+                  ))),
 
           Padding(
             padding: const EdgeInsets.only(top: 10,left: 10,right: 10),

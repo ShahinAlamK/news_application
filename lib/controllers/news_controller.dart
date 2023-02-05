@@ -34,8 +34,8 @@ class NewsController extends ChangeNotifier{
     notifyListeners();
   }
   categoryNewsDataModel(List<Article> newsModel)async{
-      _categoryNewsList=newsModel;
       _categoryLoading=false;
+      _categoryNewsList=newsModel;
     notifyListeners();
   }
   toHeadlineNewsDataModel(List<Article> newsModel)async{

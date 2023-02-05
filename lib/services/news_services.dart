@@ -68,7 +68,7 @@ class NewsService{
     }
   }
 
-  Future<Object> categoryService(query)async{
+  static Future<Object> categoryService(query)async{
     try{
       Uri uri=Uri.parse("https://newsapi.org/v2/top-headlines?country=in&category=$query&apiKey=$apikey");
       final response=await http.get(uri);

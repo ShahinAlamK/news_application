@@ -86,7 +86,7 @@ class NewsController extends ChangeNotifier{
   }
 
   Future<void> fetchCategoryController(String category)async{
-    final response=await NewsService().categoryService(category);
+    final response=await NewsService.categoryService(category);
     if(response is Success){
       categoryNewsDataModel(response.object as List<Article>);
       notifyListeners();

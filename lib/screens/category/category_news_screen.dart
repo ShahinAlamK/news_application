@@ -34,11 +34,6 @@ class _CategoryNewsScreenState extends State<CategoryNewsScreen> {
       ),
 
       body:Consumer<NewsController>(builder:(_,category,child){
-        if (category.error != null){
-          return Center(child: Text(category.error!.toString(),
-            style: const TextStyle(fontSize: 20),
-          ));
-        }
         if (category.categoryLoading) {
           return const Center(
             child: CircularProgressIndicator(),

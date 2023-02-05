@@ -4,7 +4,6 @@ import 'package:bigdeal/components/style/app_size.dart';
 import 'package:bigdeal/controllers/news_controller.dart';
 import 'package:bigdeal/screens/home/viewall_channel.dart';
 import 'package:bigdeal/screens/home/widgets/top_news.dart';
-import 'package:bigdeal/widgets/error_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'widgets/categories.dart';

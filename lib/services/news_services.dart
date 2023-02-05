@@ -17,8 +17,10 @@ class NewsService{
        final decode=jsonDecode(response.body);
        List<Article>articleList=[];
        decode['articles'].forEach((element){
+         if(element['urlToImage']!=null){
            Article article=Article.fromJson(element);
            articleList.add(article);
+         }
        });
       return Success(code: 200,object:articleList);
       }
@@ -45,8 +47,10 @@ class NewsService{
   
        List<Article>articleList=[];
        decode['articles'].forEach((element){
+         if(element['urlToImage']!=null){
            Article article=Article.fromJson(element);
            articleList.add(article);
+         }
        });
       return Success(code: 200,object:articleList);
       }
@@ -72,8 +76,10 @@ class NewsService{
        final decode=jsonDecode(response.body);
        List<Article>articleList=[];
        decode['articles'].forEach((element){
-         Article article=Article.fromJson(element);
+         if(element['urlToImage']!=null){
+           Article article=Article.fromJson(element);
            articleList.add(article);
+         }
        });
       return Success(code: 200,object:articleList);
       }
